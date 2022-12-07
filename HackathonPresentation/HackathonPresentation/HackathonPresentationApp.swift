@@ -11,10 +11,8 @@ import SwiftPresent
 @main
 struct HackathonPresentationApp: App {
     var body: some Scene {
-        WindowGroup {
-            Presentation {
-                ContentView()
-            }
+        Presentation {
+            ContentView()
         }
     }
 }
