@@ -16,6 +16,13 @@
 		BAFE8DD229411F14005488CF /* Slides.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFE8DD129411F14005488CF /* Slides.swift */; };
 		BAFE8DD629412FA9005488CF /* TrollTitleSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFE8DD529412FA9005488CF /* TrollTitleSlide.swift */; };
 		BAFE8DD82941435B005488CF /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFE8DD72941435B005488CF /* Theme.swift */; };
+		BAFE8DDF29415770005488CF /* SimulationKit in Frameworks */ = {isa = PBXBuildFile; productRef = BAFE8DDE29415770005488CF /* SimulationKit */; };
+		BAFE8DE129415770005488CF /* SimulationKitUI in Frameworks */ = {isa = PBXBuildFile; productRef = BAFE8DE029415770005488CF /* SimulationKitUI */; };
+		BAFE8DE6294157CE005488CF /* BoidShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFE8DE4294157CE005488CF /* BoidShape.swift */; };
+		BAFE8DE7294157CE005488CF /* BoidsCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFE8DE5294157CE005488CF /* BoidsCanvas.swift */; };
+		BAFE8DE9294158F6005488CF /* Boid.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFE8DE8294158F6005488CF /* Boid.swift */; };
+		BAFE8DEB294158FB005488CF /* Flock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFE8DEA294158FB005488CF /* Flock.swift */; };
+		BAFE8DED294158FF005488CF /* ForceGenerators.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFE8DEC294158FF005488CF /* ForceGenerators.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +36,11 @@
 		BAFE8DD129411F14005488CF /* Slides.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slides.swift; sourceTree = "<group>"; };
 		BAFE8DD529412FA9005488CF /* TrollTitleSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrollTitleSlide.swift; sourceTree = "<group>"; };
 		BAFE8DD72941435B005488CF /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		BAFE8DE4294157CE005488CF /* BoidShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoidShape.swift; sourceTree = "<group>"; };
+		BAFE8DE5294157CE005488CF /* BoidsCanvas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoidsCanvas.swift; sourceTree = "<group>"; };
+		BAFE8DE8294158F6005488CF /* Boid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Boid.swift; sourceTree = "<group>"; };
+		BAFE8DEA294158FB005488CF /* Flock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flock.swift; sourceTree = "<group>"; };
+		BAFE8DEC294158FF005488CF /* ForceGenerators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForceGenerators.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +48,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAFE8DDF29415770005488CF /* SimulationKit in Frameworks */,
+				BAFE8DE129415770005488CF /* SimulationKitUI in Frameworks */,
 				BAFE8DCB29410488005488CF /* SwiftPresent in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,6 +77,7 @@
 		BAFE8DB929410475005488CF /* HackathonPresentation */ = {
 			isa = PBXGroup;
 			children = (
+				BAFE8DDC29415738005488CF /* Boids */,
 				BAFE8DD129411F14005488CF /* Slides.swift */,
 				BAFE8DCC29411C7F005488CF /* Slides */,
 				BAFE8DBA29410475005488CF /* HackathonPresentationApp.swift */,
@@ -99,6 +114,18 @@
 			path = Slides;
 			sourceTree = "<group>";
 		};
+		BAFE8DDC29415738005488CF /* Boids */ = {
+			isa = PBXGroup;
+			children = (
+				BAFE8DE5294157CE005488CF /* BoidsCanvas.swift */,
+				BAFE8DE4294157CE005488CF /* BoidShape.swift */,
+				BAFE8DE8294158F6005488CF /* Boid.swift */,
+				BAFE8DEA294158FB005488CF /* Flock.swift */,
+				BAFE8DEC294158FF005488CF /* ForceGenerators.swift */,
+			);
+			path = Boids;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -117,6 +144,8 @@
 			name = HackathonPresentation;
 			packageProductDependencies = (
 				BAFE8DCA29410488005488CF /* SwiftPresent */,
+				BAFE8DDE29415770005488CF /* SimulationKit */,
+				BAFE8DE029415770005488CF /* SimulationKitUI */,
 			);
 			productName = HackathonPresentation;
 			productReference = BAFE8DB729410475005488CF /* HackathonPresentation.app */;
@@ -146,6 +175,9 @@
 				Base,
 			);
 			mainGroup = BAFE8DAE29410475005488CF;
+			packageReferences = (
+				BAFE8DDD29415770005488CF /* XCRemoteSwiftPackageReference "SimulationKit" */,
+			);
 			productRefGroup = BAFE8DB829410475005488CF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -173,10 +205,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAFE8DCE29411C8C005488CF /* TitleSlide.swift in Sources */,
+				BAFE8DE7294157CE005488CF /* BoidsCanvas.swift in Sources */,
 				BAFE8DD629412FA9005488CF /* TrollTitleSlide.swift in Sources */,
+				BAFE8DE9294158F6005488CF /* Boid.swift in Sources */,
 				BAFE8DBD29410475005488CF /* ContentView.swift in Sources */,
 				BAFE8DBB29410475005488CF /* HackathonPresentationApp.swift in Sources */,
+				BAFE8DE6294157CE005488CF /* BoidShape.swift in Sources */,
+				BAFE8DEB294158FB005488CF /* Flock.swift in Sources */,
 				BAFE8DD229411F14005488CF /* Slides.swift in Sources */,
+				BAFE8DED294158FF005488CF /* ForceGenerators.swift in Sources */,
 				BAFE8DD82941435B005488CF /* Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,10 +413,31 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		BAFE8DDD29415770005488CF /* XCRemoteSwiftPackageReference "SimulationKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ericgroom/SimulationKit";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		BAFE8DCA29410488005488CF /* SwiftPresent */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SwiftPresent;
+		};
+		BAFE8DDE29415770005488CF /* SimulationKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BAFE8DDD29415770005488CF /* XCRemoteSwiftPackageReference "SimulationKit" */;
+			productName = SimulationKit;
+		};
+		BAFE8DE029415770005488CF /* SimulationKitUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BAFE8DDD29415770005488CF /* XCRemoteSwiftPackageReference "SimulationKit" */;
+			productName = SimulationKitUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

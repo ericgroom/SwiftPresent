@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Slides: View {
     @State var slideCount = 0
+    @State var enableBoids = true
     @Namespace var presentationNamespace
     @Environment(\.presentationScale) var scale
     private let left = 0.15
@@ -17,6 +18,10 @@ struct Slides: View {
     var body: some View {
         ZStack {
             ZStack {
+                Color("PalenightBackground")
+                if enableBoids {
+                    BoidsCanvas(scatter: false).opacity(0.6)
+                }
                 TrollTitleSlide(namespace: presentationNamespace)
                     .background(.white)
                     .mask(
@@ -25,7 +30,7 @@ struct Slides: View {
                             .fill(.white)
                     )
                 TitleSlide(namespace: presentationNamespace)
-                    .background(slideCount == 0 ? Color("GoogleSlidesBackground") : Color("PalenightBackground"))
+                    .background(slideCount == 0 ? Color("GoogleSlidesBackground") : Color.clear)
                     .mask(
                         TrapezoidThing(leftHeightPercentage: slideCount == 0 ? left : 1.0, rightHeightPercentage: slideCount == 0 ? right : 1.0)
                 .fill(.white)
@@ -47,6 +52,14 @@ struct Slides: View {
                         EmptyView()
                     }
                     .keyboardShortcut(.rightArrow, modifiers: [])
+                    Button {
+                        withAnimation {
+                            enableBoids.toggle()
+                        }
+                    } label: {
+                        EmptyView()
+                    }
+                    .keyboardShortcut("b")
                 }.opacity(0)
             }
         }

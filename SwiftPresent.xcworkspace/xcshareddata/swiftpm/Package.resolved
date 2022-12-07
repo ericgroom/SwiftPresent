@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "simulationkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ericgroom/SimulationKit",
+      "state" : {
+        "branch" : "master",
+        "revision" : "156fde0c3c5aedb9f1dbcb366ecac1c6b62646c3"
+      }
+    }
+  ],
+  "version" : 2
+}
