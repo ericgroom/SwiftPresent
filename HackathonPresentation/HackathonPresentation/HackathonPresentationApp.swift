@@ -12,7 +12,8 @@ import SwiftPresent
 struct HackathonPresentationApp: App {
     var body: some Scene {
         Presentation {
-            ContentView()
+            Slides()
+                .font(.system(size: 32, weight: .heavy))
         }
     }
 }

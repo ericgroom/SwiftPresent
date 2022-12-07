@@ -12,6 +12,10 @@
 		BAFE8DBF29410476005488CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAFE8DBE29410476005488CF /* Assets.xcassets */; };
 		BAFE8DC229410476005488CF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAFE8DC129410476005488CF /* Preview Assets.xcassets */; };
 		BAFE8DCB29410488005488CF /* SwiftPresent in Frameworks */ = {isa = PBXBuildFile; productRef = BAFE8DCA29410488005488CF /* SwiftPresent */; };
+		BAFE8DCE29411C8C005488CF /* TitleSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFE8DCD29411C8C005488CF /* TitleSlide.swift */; };
+		BAFE8DD229411F14005488CF /* Slides.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFE8DD129411F14005488CF /* Slides.swift */; };
+		BAFE8DD629412FA9005488CF /* TrollTitleSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFE8DD529412FA9005488CF /* TrollTitleSlide.swift */; };
+		BAFE8DD82941435B005488CF /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFE8DD72941435B005488CF /* Theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +25,10 @@
 		BAFE8DBE29410476005488CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BAFE8DC129410476005488CF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BAFE8DC329410476005488CF /* HackathonPresentation.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HackathonPresentation.entitlements; sourceTree = "<group>"; };
+		BAFE8DCD29411C8C005488CF /* TitleSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSlide.swift; sourceTree = "<group>"; };
+		BAFE8DD129411F14005488CF /* Slides.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slides.swift; sourceTree = "<group>"; };
+		BAFE8DD529412FA9005488CF /* TrollTitleSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrollTitleSlide.swift; sourceTree = "<group>"; };
+		BAFE8DD72941435B005488CF /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +63,14 @@
 		BAFE8DB929410475005488CF /* HackathonPresentation */ = {
 			isa = PBXGroup;
 			children = (
+				BAFE8DD129411F14005488CF /* Slides.swift */,
+				BAFE8DCC29411C7F005488CF /* Slides */,
 				BAFE8DBA29410475005488CF /* HackathonPresentationApp.swift */,
 				BAFE8DBC29410475005488CF /* ContentView.swift */,
 				BAFE8DBE29410476005488CF /* Assets.xcassets */,
 				BAFE8DC329410476005488CF /* HackathonPresentation.entitlements */,
 				BAFE8DC029410476005488CF /* Preview Content */,
+				BAFE8DD72941435B005488CF /* Theme.swift */,
 			);
 			path = HackathonPresentation;
 			sourceTree = "<group>";
@@ -77,6 +88,15 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BAFE8DCC29411C7F005488CF /* Slides */ = {
+			isa = PBXGroup;
+			children = (
+				BAFE8DCD29411C8C005488CF /* TitleSlide.swift */,
+				BAFE8DD529412FA9005488CF /* TrollTitleSlide.swift */,
+			);
+			path = Slides;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,8 +172,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAFE8DCE29411C8C005488CF /* TitleSlide.swift in Sources */,
+				BAFE8DD629412FA9005488CF /* TrollTitleSlide.swift in Sources */,
 				BAFE8DBD29410475005488CF /* ContentView.swift in Sources */,
 				BAFE8DBB29410475005488CF /* HackathonPresentationApp.swift in Sources */,
+				BAFE8DD229411F14005488CF /* Slides.swift in Sources */,
+				BAFE8DD82941435B005488CF /* Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

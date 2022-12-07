@@ -23,6 +23,7 @@ public struct Presentation<Content: View>: Scene {
     public var body: some Scene {
         WindowGroup {
             content()
+                .edgesIgnoringSafeArea(.top)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .onAppear {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.0) {
