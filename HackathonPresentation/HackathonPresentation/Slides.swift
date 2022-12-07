@@ -10,11 +10,12 @@ import SwiftUI
 struct Slides: View {
     @State var slideCount = 0
     @Namespace var presentationNamespace
+    @Environment(\.presentationScale) var scale
     
     var body: some View {
         ZStack {
             Color.white
-            TrapezoidThing(leftHeightPercentage: slideCount == 0 ? 0.2 : 1.0, rightHeightPercentage: slideCount == 0 ? 0.6 : 1.0)
+            TrapezoidThing(leftHeightPercentage: slideCount == 0 ? 0.15 : 1.0, rightHeightPercentage: slideCount == 0 ? 0.65 : 1.0)
                 .fill(slideCount == 0 ? Color("GoogleSlidesBackground") : Color("PalenightBackground"))
             ZStack {
                 if slideCount == 0 {

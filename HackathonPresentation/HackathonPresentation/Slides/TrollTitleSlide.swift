@@ -9,22 +9,25 @@ import SwiftUI
 
 struct TrollTitleSlide: View {
     let namespace: Namespace.ID
+    @Environment(\.presentationScale) var scale
     
     var body: some View {
         ZStack {
             HStack {
                 VStack(alignment: .leading) {
                     Text("SwiftPresent")
-                        .font(.custom("Merriweather", size: Theme.headlineSize))
+                        .font(.custom("Merriweather", size: Theme.headlineSize * scale))
                         .foregroundColor(Color("GoogleSlidesForeground"))
-                        .padding(.bottom, 50)
+                        .padding(.bottom, 84 * scale)
                     Text("A presentation framework for SwiftUI")
-                        .font(.custom("Roboto", size: Theme.subheadlineSize))
+                        .font(.custom("Roboto", size: Theme.subheadlineSize * scale))
                         .foregroundColor(Color("GoogleSlidesForegroundSecondary"))
                     Spacer()
                 }
                 Spacer()
-            }.padding(60)
+            }
+            .padding(.horizontal, 56 * scale)
+            .padding(.vertical, 80 * scale)
         }
     }
 }

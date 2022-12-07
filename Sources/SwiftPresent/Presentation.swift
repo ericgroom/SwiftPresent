@@ -15,6 +15,7 @@ class WindowContainer {
 
 public struct Presentation<Content: View>: Scene {
     let content: () -> Content
+    @StateObject private var windowSize = WindowSize()
     
     public init(@ViewBuilder content: @escaping () -> Content) {
         self.content = content
@@ -23,6 +24,7 @@ public struct Presentation<Content: View>: Scene {
     public var body: some Scene {
         WindowGroup {
             content()
+                .environment(\.presentationScale, windowSize.scale)
                 .edgesIgnoringSafeArea(.top)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .onAppear {
@@ -30,6 +32,8 @@ public struct Presentation<Content: View>: Scene {
                         if let window = NSApplication.shared.windows.last {
                             WindowContainer.shared.window = window
                             window.contentAspectRatio = NSSize(width: 16.0, height: 9.0)
+                            window.delegate = windowSize
+                            windowSize.configure()
                         }
                     }
                     NSEvent.addLocalMonitorForEvents(matching: [.mouseMoved]) { event in
