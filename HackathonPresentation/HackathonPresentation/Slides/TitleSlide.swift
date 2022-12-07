@@ -19,10 +19,10 @@ struct TitleSlide: View {
                         Text("import ").foregroundColor(Color("PalenightMagenta")) + Text("SwiftPresent")
                             .foregroundColor(Color("PalenightForeground"))
                     }
-                    .font(.custom("Monaco", size: Theme.headlineSize * scale))
+                    .font(.custom("SF Mono", size: Theme.headlineSize * scale))
                     .padding(.bottom, 84 * scale)
                     Text("A presentation framework for SwiftUI")
-                        .font(.custom("SF Mono", size: Theme.subheadlineSize * scale))
+                        .font(.custom("Monaco", size: Theme.subheadlineSize * scale))
                         .foregroundColor(Color("PalenightForegroundSecondary"))
                     Spacer()
                 }
