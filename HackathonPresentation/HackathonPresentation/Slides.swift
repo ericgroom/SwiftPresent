@@ -15,7 +15,7 @@ struct Slides: View {
     @Environment(\.presentationScale) var scale
     private let left = 0.15
     private let right = 0.65
-    private let numberOfSlides = 3
+    private let numberOfSlides = 4
     
     var body: some View {
         ZStack {
@@ -47,6 +47,8 @@ struct Slides: View {
                 case 2:
                     ExplanationSlide()
                         .transition(.scale)
+                case 3:
+                    CodeExample()
                 default:
                     EmptyView()
                 }

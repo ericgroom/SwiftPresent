@@ -8,6 +8,15 @@
         "branch" : "master",
         "revision" : "156fde0c3c5aedb9f1dbcb366ecac1c6b62646c3"
       }
+    },
+    {
+      "identity" : "splash",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/JohnSundell/Splash",
+      "state" : {
+        "revision" : "bc20ac969c1b2a770bf315497e0a66d7367f7fec",
+        "version" : "0.9.0"
+      }
     }
   ],
   "version" : 2

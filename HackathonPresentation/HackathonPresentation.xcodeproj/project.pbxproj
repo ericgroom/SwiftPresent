@@ -11,6 +11,8 @@
 		BA3743E72941619400CA6194 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3743E62941619400CA6194 /* Slide.swift */; };
 		BA3743EA2942602A00CA6194 /* TitledSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3743E92942602A00CA6194 /* TitledSlide.swift */; };
 		BA3743EC2942611500CA6194 /* TextBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3743EB2942611500CA6194 /* TextBody.swift */; };
+		BA3743F7294286C400CA6194 /* Splash in Frameworks */ = {isa = PBXBuildFile; productRef = BA3743F6294286C400CA6194 /* Splash */; };
+		BA3743F9294286CB00CA6194 /* CodeExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3743F8294286CB00CA6194 /* CodeExample.swift */; };
 		BAFE8DBB29410475005488CF /* HackathonPresentationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFE8DBA29410475005488CF /* HackathonPresentationApp.swift */; };
 		BAFE8DBD29410475005488CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFE8DBC29410475005488CF /* ContentView.swift */; };
 		BAFE8DBF29410476005488CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAFE8DBE29410476005488CF /* Assets.xcassets */; };
@@ -34,6 +36,7 @@
 		BA3743E62941619400CA6194 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
 		BA3743E92942602A00CA6194 /* TitledSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitledSlide.swift; sourceTree = "<group>"; };
 		BA3743EB2942611500CA6194 /* TextBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBody.swift; sourceTree = "<group>"; };
+		BA3743F8294286CB00CA6194 /* CodeExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeExample.swift; sourceTree = "<group>"; };
 		BAFE8DB729410475005488CF /* HackathonPresentation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackathonPresentation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAFE8DBA29410475005488CF /* HackathonPresentationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackathonPresentationApp.swift; sourceTree = "<group>"; };
 		BAFE8DBC29410475005488CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +60,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAFE8DDF29415770005488CF /* SimulationKit in Frameworks */,
+				BA3743F7294286C400CA6194 /* Splash in Frameworks */,
 				BAFE8DE129415770005488CF /* SimulationKitUI in Frameworks */,
 				BAFE8DCB29410488005488CF /* SwiftPresent in Frameworks */,
 			);
@@ -130,6 +134,7 @@
 				BAFE8DCD29411C8C005488CF /* TitleSlide.swift */,
 				BAFE8DD529412FA9005488CF /* TrollTitleSlide.swift */,
 				BA3743E429415F6700CA6194 /* ExplanationSlide.swift */,
+				BA3743F8294286CB00CA6194 /* CodeExample.swift */,
 			);
 			path = Slides;
 			sourceTree = "<group>";
@@ -166,6 +171,7 @@
 				BAFE8DCA29410488005488CF /* SwiftPresent */,
 				BAFE8DDE29415770005488CF /* SimulationKit */,
 				BAFE8DE029415770005488CF /* SimulationKitUI */,
+				BA3743F6294286C400CA6194 /* Splash */,
 			);
 			productName = HackathonPresentation;
 			productReference = BAFE8DB729410475005488CF /* HackathonPresentation.app */;
@@ -197,6 +203,7 @@
 			mainGroup = BAFE8DAE29410475005488CF;
 			packageReferences = (
 				BAFE8DDD29415770005488CF /* XCRemoteSwiftPackageReference "SimulationKit" */,
+				BA3743F5294286C400CA6194 /* XCRemoteSwiftPackageReference "Splash" */,
 			);
 			productRefGroup = BAFE8DB829410475005488CF /* Products */;
 			projectDirPath = "";
@@ -227,6 +234,7 @@
 				BAFE8DCE29411C8C005488CF /* TitleSlide.swift in Sources */,
 				BA3743EA2942602A00CA6194 /* TitledSlide.swift in Sources */,
 				BA3743E529415F6700CA6194 /* ExplanationSlide.swift in Sources */,
+				BA3743F9294286CB00CA6194 /* CodeExample.swift in Sources */,
 				BAFE8DE7294157CE005488CF /* BoidsCanvas.swift in Sources */,
 				BAFE8DD629412FA9005488CF /* TrollTitleSlide.swift in Sources */,
 				BAFE8DE9294158F6005488CF /* Boid.swift in Sources */,
@@ -438,6 +446,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		BA3743F5294286C400CA6194 /* XCRemoteSwiftPackageReference "Splash" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JohnSundell/Splash";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
 		BAFE8DDD29415770005488CF /* XCRemoteSwiftPackageReference "SimulationKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ericgroom/SimulationKit";
@@ -449,6 +465,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		BA3743F6294286C400CA6194 /* Splash */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BA3743F5294286C400CA6194 /* XCRemoteSwiftPackageReference "Splash" */;
+			productName = Splash;
+		};
 		BAFE8DCA29410488005488CF /* SwiftPresent */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SwiftPresent;
