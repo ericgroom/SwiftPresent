@@ -12,7 +12,7 @@ struct TitleSlide: View {
     @Environment(\.presentationScale) var scale
     
     var body: some View {
-        ZStack {
+        Slide {
             HStack {
                 VStack(alignment: .leading) {
                     Group {
@@ -28,8 +28,6 @@ struct TitleSlide: View {
                 }
                 Spacer()
             }
-            .padding(.horizontal, 56 * scale)
-            .padding(.vertical, 80 * scale)
         }
     }
 }

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA3743E529415F6700CA6194 /* ExplanationSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3743E429415F6700CA6194 /* ExplanationSlide.swift */; };
+		BA3743E72941619400CA6194 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3743E62941619400CA6194 /* Slide.swift */; };
+		BA3743EA2942602A00CA6194 /* TitledSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3743E92942602A00CA6194 /* TitledSlide.swift */; };
+		BA3743EC2942611500CA6194 /* TextBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3743EB2942611500CA6194 /* TextBody.swift */; };
 		BAFE8DBB29410475005488CF /* HackathonPresentationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFE8DBA29410475005488CF /* HackathonPresentationApp.swift */; };
 		BAFE8DBD29410475005488CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFE8DBC29410475005488CF /* ContentView.swift */; };
 		BAFE8DBF29410476005488CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAFE8DBE29410476005488CF /* Assets.xcassets */; };
@@ -26,6 +30,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BA3743E429415F6700CA6194 /* ExplanationSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplanationSlide.swift; sourceTree = "<group>"; };
+		BA3743E62941619400CA6194 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
+		BA3743E92942602A00CA6194 /* TitledSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitledSlide.swift; sourceTree = "<group>"; };
+		BA3743EB2942611500CA6194 /* TextBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBody.swift; sourceTree = "<group>"; };
 		BAFE8DB729410475005488CF /* HackathonPresentation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackathonPresentation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAFE8DBA29410475005488CF /* HackathonPresentationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackathonPresentationApp.swift; sourceTree = "<group>"; };
 		BAFE8DBC29410475005488CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +65,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA3743E82942601B00CA6194 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				BA3743E62941619400CA6194 /* Slide.swift */,
+				BA3743E92942602A00CA6194 /* TitledSlide.swift */,
+				BA3743EB2942611500CA6194 /* TextBody.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
 		BAFE8DAE29410475005488CF = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +97,7 @@
 			children = (
 				BAFE8DDC29415738005488CF /* Boids */,
 				BAFE8DD129411F14005488CF /* Slides.swift */,
+				BA3743E82942601B00CA6194 /* Layout */,
 				BAFE8DCC29411C7F005488CF /* Slides */,
 				BAFE8DBA29410475005488CF /* HackathonPresentationApp.swift */,
 				BAFE8DBC29410475005488CF /* ContentView.swift */,
@@ -110,6 +129,7 @@
 			children = (
 				BAFE8DCD29411C8C005488CF /* TitleSlide.swift */,
 				BAFE8DD529412FA9005488CF /* TrollTitleSlide.swift */,
+				BA3743E429415F6700CA6194 /* ExplanationSlide.swift */,
 			);
 			path = Slides;
 			sourceTree = "<group>";
@@ -205,6 +225,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAFE8DCE29411C8C005488CF /* TitleSlide.swift in Sources */,
+				BA3743EA2942602A00CA6194 /* TitledSlide.swift in Sources */,
+				BA3743E529415F6700CA6194 /* ExplanationSlide.swift in Sources */,
 				BAFE8DE7294157CE005488CF /* BoidsCanvas.swift in Sources */,
 				BAFE8DD629412FA9005488CF /* TrollTitleSlide.swift in Sources */,
 				BAFE8DE9294158F6005488CF /* Boid.swift in Sources */,
@@ -213,6 +235,8 @@
 				BAFE8DE6294157CE005488CF /* BoidShape.swift in Sources */,
 				BAFE8DEB294158FB005488CF /* Flock.swift in Sources */,
 				BAFE8DD229411F14005488CF /* Slides.swift in Sources */,
+				BA3743EC2942611500CA6194 /* TextBody.swift in Sources */,
+				BA3743E72941619400CA6194 /* Slide.swift in Sources */,
 				BAFE8DED294158FF005488CF /* ForceGenerators.swift in Sources */,
 				BAFE8DD82941435B005488CF /* Theme.swift in Sources */,
 			);

@@ -22,19 +22,24 @@ struct Slides: View {
                 if enableBoids {
                     BoidsCanvas(scatter: false).opacity(0.6)
                 }
-                TrollTitleSlide(namespace: presentationNamespace)
-                    .background(.white)
-                    .mask(
-                        TrapezoidThing(leftHeightPercentage: slideCount == 0 ? 1 - right : 0.0, rightHeightPercentage: slideCount == 0 ? 1 - left : 0.0)
-                            .scale(x: -1, y: -1, anchor: .center)
-                            .fill(.white)
-                    )
-                TitleSlide(namespace: presentationNamespace)
-                    .background(slideCount == 0 ? Color("GoogleSlidesBackground") : Color.clear)
-                    .mask(
-                        TrapezoidThing(leftHeightPercentage: slideCount == 0 ? left : 1.0, rightHeightPercentage: slideCount == 0 ? right : 1.0)
-                .fill(.white)
-                    )
+                if slideCount == 0 || slideCount == 1 {
+                    TrollTitleSlide(namespace: presentationNamespace)
+                        .background(.white)
+                        .mask(
+                            TrapezoidThing(leftHeightPercentage: slideCount == 0 ? 1 - right : 0.0, rightHeightPercentage: slideCount == 0 ? 1 - left : 0.0)
+                                .scale(x: -1, y: -1, anchor: .center)
+                                .fill(.white)
+                        )
+                    TitleSlide(namespace: presentationNamespace)
+                        .background(slideCount == 0 ? Color("GoogleSlidesBackground") : Color.clear)
+                        .mask(
+                            TrapezoidThing(leftHeightPercentage: slideCount == 0 ? left : 1.0, rightHeightPercentage: slideCount == 0 ? right : 1.0)
+                                .fill(.white)
+                        )
+                } else if slideCount == 2 {
+                    ExplanationSlide()
+                        .transition(.scale)
+                }
                 Group {
                     Button {
                         withAnimation {

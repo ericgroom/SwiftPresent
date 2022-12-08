@@ -12,7 +12,7 @@ struct TrollTitleSlide: View {
     @Environment(\.presentationScale) var scale
     
     var body: some View {
-        ZStack {
+        Slide {
             HStack {
                 VStack(alignment: .leading) {
                     Text("SwiftPresent")
@@ -26,8 +26,6 @@ struct TrollTitleSlide: View {
                 }
                 Spacer()
             }
-            .padding(.horizontal, 56 * scale)
-            .padding(.vertical, 80 * scale)
         }
     }
 }
