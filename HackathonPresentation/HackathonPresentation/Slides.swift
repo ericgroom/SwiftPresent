@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftPresent
 
 struct Slides: View {
     @State var slideCount = 0
@@ -14,15 +15,22 @@ struct Slides: View {
     @Environment(\.presentationScale) var scale
     private let left = 0.15
     private let right = 0.65
+    private let numberOfSlides = 3
     
     var body: some View {
         ZStack {
-            ZStack {
+            KeyboardShortcuts(shortcuts: [
+                (KeyboardShortcut("b", modifiers: [.command]), {
+                    self.enableBoids.toggle()
+                })
+            ])
+            SlideTracker {
                 Color("PalenightBackground")
                 if enableBoids {
                     BoidsCanvas(scatter: false).opacity(0.6)
                 }
-                if slideCount == 0 || slideCount == 1 {
+                switch slideCount {
+                case 0, 1:
                     TrollTitleSlide(namespace: presentationNamespace)
                         .background(.white)
                         .mask(
@@ -36,37 +44,27 @@ struct Slides: View {
                             TrapezoidThing(leftHeightPercentage: slideCount == 0 ? left : 1.0, rightHeightPercentage: slideCount == 0 ? right : 1.0)
                                 .fill(.white)
                         )
-                } else if slideCount == 2 {
+                case 2:
                     ExplanationSlide()
                         .transition(.scale)
+                default:
+                    EmptyView()
                 }
-                Group {
-                    Button {
-                        withAnimation {
-                            slideCount -= 1
-                        }
-                    } label: {
-                        EmptyView()
-                    }
-                    .keyboardShortcut(.leftArrow, modifiers: [])
-                    Button {
-                        withAnimation {
-                            slideCount += 1
-                        }
-                    } label: {
-                        EmptyView()
-                    }
-                    .keyboardShortcut(.rightArrow, modifiers: [])
-                    Button {
-                        withAnimation {
-                            enableBoids.toggle()
-                        }
-                    } label: {
-                        EmptyView()
-                    }
-                    .keyboardShortcut("b")
-                }.opacity(0)
+            } nextSlide: {
+                withAnimation { updateSlideCount { $0 + 1} }
+            } previousSlide: {
+                withAnimation { updateSlideCount { $0 - 1} }
             }
         }
+    }
+    
+    private func updateSlideCount(_ transform: (Int) -> Int) {
+        var updated = transform(slideCount)
+        if updated < 0 {
+            updated = 0
+        } else if updated >= numberOfSlides {
+            updated = numberOfSlides - 1
+        }
+        slideCount = updated
     }
 }
