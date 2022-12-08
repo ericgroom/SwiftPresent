@@ -22,10 +22,11 @@ public extension EnvironmentValues {
 class WindowSize: NSObject, ObservableObject, NSWindowDelegate {
     @Published var width: CGFloat = 0.0
     @Published var height: CGFloat = 0.0
+    @Published var scalingEnabled = true
     
     private let baselineWidth: CGFloat = 1280
     var scale: CGFloat {
-        return round(width / baselineWidth * 10) / 10.0
+        return scalingEnabled ? round(width / baselineWidth * 10) / 10.0 : 1.0
     }
     
     func configure() {

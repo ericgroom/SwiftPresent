@@ -52,6 +52,11 @@ public struct Presentation<Content: View>: Scene {
                     }
                 }
         }
+        .commands {
+            CommandGroup(after: .windowSize) {
+                Toggle("Content Scaling", isOn: $windowSize.scalingEnabled)
+            }
+        }
     }
 }
 
