@@ -37,6 +37,7 @@ struct ChallengesSlide: View {
                             Text("• Preview/Notes windows")
                             Text("• Embed screen grabs of other windows")
                             Text("• Execute code and display output")
+                            Text("• Laser pointer")
                         }
                         .padding(.leading, 16)
                     }
